@@ -1,19 +1,18 @@
 import jieba
 import jieba.posseg as psg
-from collections import Counter
 
 if __name__ == '__main__':
     s = '我正在河南街的电视台'
 
-    jieba.suggest_freq('河南街',True)
+    jieba.suggest_freq('河南街', True)
     # 简单分词
     cut = jieba.cut(s)
-    ## print(cut)
+    # print(cut)
     print(','.join(cut))
 
     # 全模式
     # 全模式就是把文本分成尽可能多的词
-    cut = jieba.cut(s,cut_all=True)
+    cut = jieba.cut(s, cut_all=True)
     print(','.join(cut))
 
     # 搜索引擎模式
