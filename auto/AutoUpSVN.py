@@ -9,6 +9,10 @@ def auto_update_svn(txt_path):
             # print(line)
             pro_line = line.strip()
 
+            # 过滤以井号(##)开头的打印该行至控制台
+            if '#'.__eq__(pro_line[0]):
+                continue
+
             # 过滤以井号(#)开头的
             if '#'.__eq__(pro_line[0]):
                 continue
